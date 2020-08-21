@@ -1,0 +1,1 @@
+## This folder contains all the codes of Array and String of Leetcode Learn solved in java and python.
