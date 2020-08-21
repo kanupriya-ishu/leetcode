@@ -1,1 +1,1 @@
-## This folder contains all the codes of Arrays 101 of Leetcode Learn solved in java and python.
+## This folder contains all the non-premium codes of Arrays 101 of Leetcode Learn solved in java and python.
