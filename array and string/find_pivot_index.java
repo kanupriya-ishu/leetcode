@@ -5,16 +5,17 @@ class Solution {
         for(int i=0; i<nums.length; i++)
         {
             sum1 = sum1 + nums[i];
-    
-            sum2 = 0;
-            for(int j=nums.length-1,count=0; j>=0; j--,count++)
+        }
+        
+        for(int i=0;i<nums.length; i++)
+        {
+            
+            if(sum2 == sum1-sum2-nums[i])
             {
-                sum2 = sum2 + nums[j];
-                if(sum1==sum2 && count+i==nums.length-1)
-                {
-                    return i;
-                }
+                return i;
             }
+            
+            sum2 = sum2 + nums[i];
         }
         
         
