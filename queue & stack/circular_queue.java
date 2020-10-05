@@ -11,7 +11,7 @@ class MyCircularQueue {
     }
     
     /** Insert an element into the circular queue. Return true if the operation is successful. */
-    public boolean enQueue(int value) {
+	public boolean enQueue(int value) {
         if (isFull()) return false;
         
         if(rear==-1)
@@ -21,14 +21,9 @@ class MyCircularQueue {
             
         }
         
-        else if(rear==size-1)
-        {
-            rear = 0;
-        }
-        
         else
         {
-            rear++;
+            rear=(rear+1)%size;
         }
         queue[rear] = value;
         return true;
