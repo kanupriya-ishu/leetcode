@@ -67,7 +67,7 @@ class MyCircularQueue {
     
     /** Checks whether the circular queue is full or not. */
     public boolean isFull() {
-        if ((front==rear+1) || (front==0 && rear==size-1))
+        if (front==(rear+1)%size)
             return true;
         return false;
     }
