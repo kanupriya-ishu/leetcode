@@ -4,13 +4,9 @@ class Solution {
         for(i=0; i<nums.length; i++)
         {
             int digit=0;
-            while(nums[i]!=0)
-            {
-                nums[i] = nums[i]/10;
-                digit++;
-            }
+            String num = Integer.toString(nums[i]);
             
-            if(digit % 2 == 0)
+            if(num.length() % 2 == 0)
             {
                 count++;
             }
