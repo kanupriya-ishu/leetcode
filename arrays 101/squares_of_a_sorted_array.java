@@ -2,16 +2,29 @@ import java.util.Arrays;
 class Solution {
     public int[] sortedSquares(int[] A) {
         
-        int i, temp;
+        int[] squares = new int[A.length];
         
-        for(i=0; i<A.length; i++)
+        int l =0;
+        int r = A.length-1;
+        int i =r;
+        
+        while(l<=r)
         {
-            A[i] = A[i]*A[i];
+            int sq1 = A[l]*A[l];
+            int sq2 = A[r]*A[r];
+            
+            if (sq1 > sq2)
+            {
+                squares[i--] = sq1;
+                l++;
+            }
+            else
+            {
+                squares[i--] = sq2;
+                r--;
+            }
         }
         
-        
-        Arrays.sort(A);
-        
-        return A;
+        return squares;
     }
 }
