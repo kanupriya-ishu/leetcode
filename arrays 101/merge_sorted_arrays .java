@@ -2,13 +2,35 @@ import java.util.*;
 class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         
-        int i, j;
+        int i=0, j=0, len=0;
+        int[] nums3 = new int[nums1.length];
         
-        for(i=m, j=0; i<nums1.length && j<n; i++, j++)
+        while(i<m && j<n)
         {
-            nums1[i] = nums2[j];
+            if (nums1[i]<nums2[j])
+            {
+                nums3[len++] = nums1[i++];
+            }
+            else
+            {
+                nums3[len++] = nums2[j++];
+            }
         }
         
-        Arrays.sort(nums1);
+        
+        while(i<m)
+        {
+            nums3[len++] = nums1[i++];
+        }
+        
+        while(j<n)
+        {
+            nums3[len++] = nums2[j++];
+        }
+        
+        for(int k=0; k<nums1.length; k++)
+        {
+            nums1[k] = nums3[k];
+        }
     }
 }
